@@ -709,8 +709,8 @@
 		 */
 		publicAPIs.validate = function (field, options) {
 
-			// Don't validate submits, buttons, file and reset inputs, and disabled and readonly fields
-			if (field.disabled || field.readOnly || field.type === 'reset' || field.type === 'submit' || field.type === 'button') return;
+			// Don't validate submits, buttons, file and reset inputs, disabled, readonly and hidden fields
+			if (field.disabled || field.readOnly || field.type === 'reset' || field.type === 'submit' || field.type === 'button' || field.type === 'hidden') return;
 
 			// Local settings
 			var _settings = extend(settings, options || {});
